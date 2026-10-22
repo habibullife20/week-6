@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int max2(int a, int b) {
+    if (a > b) {
+        return a;
+    }
+    return b;
+}
+
+int min2(int a, int b) {
+    if (a < b) {
+        return a;
+    }
+    return b;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    if (n > 0) {
+        int val;
+        cin >> val;
+
+        int mx = val;
+        int mn = val;
+
+        for (int i = 1; i < n; i++) {
+            cin >> val;
+            mx = max2(mx, val);
+            mn = min2(mn, val); 
+        }
+
+        cout << "max=" << mx << " min=" << mn << endl;
+    }
+
+    return 0;
+}
